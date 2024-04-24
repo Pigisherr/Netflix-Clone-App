@@ -1,14 +1,13 @@
-import { useState } from "react";
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./index.css";
+import Frontpage from './files/Frontpage.jsx'; 
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1 className="bg-red-400">hello world</h1>
-    </>
+      <Routes>
+        <Route path="/" element={<Frontpage />} /> 
+      </Routes>
   );
 }
 
