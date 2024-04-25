@@ -1,6 +1,7 @@
 import React from "react";
 
 const SignUp1 = () => {
+<<<<<<< HEAD
   
   const FrontPageNavbar = () => {
     return (
@@ -40,3 +41,9 @@ const SignUp1 = () => {
 
 export default SignUp1;
 
+=======
+  return <div>SignUp1</div>;
+};
+
+export default SignUp1;
+>>>>>>> 0938e3202bf28a80f482058edd61f97b653f5d30

@@ -1,36 +1,40 @@
 import React from "react";
-import "../index.css"
+import { useNavigate } from "react-router-dom";
+import "../index.css";
+import FrontPageNavbar from "../components/FrontpageNavbar";
 
 const Frontpage = () => {
-  
-  const FrontPageNavbar = () => {
-    return (<div className='flex justify-between items-center'><img className='p-[2rem] h-[8rem] ' src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png'></img>
-    <button className='rounded m-[2rem] p-[2rem] justify-center flex  bg-red-900'>Sign In</button>
-    </div>)
-  }
-  
-  
-  const LoginForm = () => {
-    return (
-      <form className="flex flex-col justify-center items-center w-[20rem]">
-    <div className="flex flex-col justify-center items-center max-w-[20rem]">
-     <input type="username" placeholder="username"/>
-     <input type="email" placeholder="email"/>
-     <input type="password" placeholder="password"/>
-      </div>
-      
-      <button className="w-[20rem] rounded-md bg-red-500 w-full">Log In</button>
-   
-      </form>
-    )
-  }
-  
-  
-return <div className='bg-black text-white'>
+  const navigate = useNavigate();
 
-<FrontPageNavbar/> 
-<LoginForm/>
-</div>;
+  const FrontPageHeader = () => {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-7xl">Unlimited Movies, TV Shows, and more</h1>
+        <h3 className="text-4xl mt-[1rem] ">watch anywhere, cancel anytime</h3>
+        <button
+          className="mb[10rem] mt-[1rem] bg-red-700 hover:bg-red-600  font-semibold py-[2rem] px-[4rem] text-3xl rounded"
+          onClick={() => {
+            navigate("/Register");
+          }}
+        >
+          Get Started
+        </button>
+      </div>
+    );
+  };
+
+  return (
+    <div
+      style={{
+        backgroundImage:
+          'url("https://flexsub.shop/content/images/size/w1200/2021/11/1_5lyavS59mazOFnb55Z6znQ.png")',
+      }}
+      className="text-white bg-cover  bg-no-repeat"
+    >
+      <FrontPageNavbar />
+      <FrontPageHeader />
+    </div>
+  );
 };
 
 export default Frontpage;
