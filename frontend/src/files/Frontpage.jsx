@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../index.css";
 import FrontPageNavbar from "../components/FrontpageNavbar";
 
+
+
 const Frontpage = () => {
   const navigate = useNavigate();
 
@@ -12,7 +14,7 @@ const Frontpage = () => {
         <h1 className="text-7xl">Unlimited Movies, TV Shows, and more</h1>
         <h3 className="text-4xl mt-[1rem] ">watch anywhere, cancel anytime</h3>
         <button
-          className="mb[10rem] mt-[1rem] bg-red-700 hover:bg-red-600  font-semibold py-[2rem] px-[4rem] text-3xl rounded"
+      className="mb[10rem] mt-[1rem] bg-red-700 hover:bg-red-600  font-semibold py-[2rem] px-[4rem] text-3xl rounded"
           onClick={() => {
             navigate("/Register");
           }}

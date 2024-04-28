@@ -1,3 +1,6 @@
+import React from "react"
+
+
 const Login = () => {
   const LoginNavbar = () => {
     return (
@@ -16,17 +19,17 @@ const Login = () => {
         <div className="bg-black p-8 rounded-lg">
           <h1 className="text-5xl mb-10">Login</h1>
           <input
-            type="username"
+            type="text"
             placeholder="Username"
             className="mb-2 w-full pl-2 py-[0.5rem] rounded text-black"
           />
           <input
-            type="email"
+            type="text"
             placeholder="Email"
             className="mb-2 w-full pl-2 py-[0.5rem] rounded text-black"
           />
           <input
-            type="password"
+            type="text"
             placeholder="Password"
             className="mb-2 w-full pl-2 py-[0.5rem] rounded text-black"
           />
